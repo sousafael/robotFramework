@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2 (Python 3.8.2 on win32)" generated="20200429 19:16:03.597" rpa="false">
+<suite id="s1" name="Tests" source="C:\Robot_Framework\robot\web\tests">
+<suite id="s1-s1" name="Login" source="C:\Robot_Framework\robot\web\tests\login.robot">
+<test id="s1-s1-t1" name="Login com sucesso">
+<kw name="Inicia sessão" library="basePage" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20200429 19:16:03.760" level="INFO">Opening browser 'chrome' to base url 'http://165.227.93.41/lojinha-web'.</msg>
+<status status="PASS" starttime="20200429 19:16:03.760" endtime="20200429 19:16:08.110"></status>
+</kw>
+<status status="PASS" starttime="20200429 19:16:03.760" endtime="20200429 19:16:08.110"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+</arguments>
+<msg timestamp="20200429 19:16:08.111" level="INFO">Opening url 'http://165.227.93.41/lojinha-web'</msg>
+<status status="PASS" starttime="20200429 19:16:08.110" endtime="20200429 19:16:08.319"></status>
+</kw>
+<kw name="Preencher Login">
+<arguments>
+<arg>rafael</arg>
+<arg>123456</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>css:input[name=usuario]</arg>
+<arg>${uname}</arg>
+</arguments>
+<msg timestamp="20200429 19:16:08.321" level="INFO">Typing text 'rafael' into text field 'css:input[name=usuario]'.</msg>
+<status status="PASS" starttime="20200429 19:16:08.320" endtime="20200429 19:16:08.398"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>css:input[name=senha]</arg>
+<arg>${pass}</arg>
+</arguments>
+<msg timestamp="20200429 19:16:08.398" level="INFO">Typing text '123456' into text field 'css:input[name=senha]'.</msg>
+<status status="PASS" starttime="20200429 19:16:08.398" endtime="20200429 19:16:08.475"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css:button[name='action']</arg>
+</arguments>
+<msg timestamp="20200429 19:16:08.475" level="INFO">Clicking element 'css:button[name='action']'.</msg>
+<status status="PASS" starttime="20200429 19:16:08.475" endtime="20200429 19:16:08.907"></status>
+</kw>
+<status status="PASS" starttime="20200429 19:16:08.320" endtime="20200429 19:16:08.908"></status>
+</kw>
+<kw name="Pagina Secreta">
+<arguments>
+<arg>Rafael de Sousa</arg>
+</arguments>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Boas vindas, ${full_name}!</arg>
+</arguments>
+<msg timestamp="20200429 19:16:08.922" level="INFO">Current page contains text 'Boas vindas, Rafael de Sousa!'.</msg>
+<status status="PASS" starttime="20200429 19:16:08.908" endtime="20200429 19:16:08.922"></status>
+</kw>
+<status status="PASS" starttime="20200429 19:16:08.908" endtime="20200429 19:16:08.923"></status>
+</kw>
+<kw name="Encerra sessão" library="basePage" type="teardown">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200429 19:16:09.195" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200429 19:16:08.924" endtime="20200429 19:16:09.196"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200429 19:16:09.196" endtime="20200429 19:16:11.289"></status>
+</kw>
+<status status="PASS" starttime="20200429 19:16:08.923" endtime="20200429 19:16:11.289"></status>
+</kw>
+<tags>
+<tag>login_sucesso</tag>
+</tags>
+<status status="PASS" starttime="20200429 19:16:03.759" endtime="20200429 19:16:11.289" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20200429 19:16:03.620" endtime="20200429 19:16:11.291"></status>
+</suite>
+<status status="PASS" starttime="20200429 19:16:03.599" endtime="20200429 19:16:11.292"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0">login_sucesso</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Tests">Tests</stat>
+<stat pass="1" fail="0" id="s1-s1" name="Login">Tests.Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
